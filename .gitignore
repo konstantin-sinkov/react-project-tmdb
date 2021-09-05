@@ -12,6 +12,7 @@
 /build
 
 # misc
+/src/services/.bearer_token
 .DS_Store
 .env.local
 .env.development.local

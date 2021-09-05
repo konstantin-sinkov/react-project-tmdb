@@ -5,15 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
+import {GET_FILMS, GET_GENRES} from "./redux/actions/action.types";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 let initialState = ({films: [], genres: []});
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "GET_FILMS":
-            return {...state, films: [action.payload]}
-        case "GET_GENRES":
-            return {...state, genres: [action.payload]}
+        case GET_FILMS:
+            return {...state, films: action.payload}
+        case GET_GENRES:
+            return {...state, genres: action.payload}
         // case "GET_FILM_DETAIL_INFO":
         //     return
         default:
@@ -21,7 +23,10 @@ const reducer = (state = initialState, action) => {
     }
 }
 
+
 let store = createStore(reducer);
+// store.dispatch(getMovies([]));
+// store.dispatch(getGenres([]));
 
 ReactDOM.render(
   <React.StrictMode>

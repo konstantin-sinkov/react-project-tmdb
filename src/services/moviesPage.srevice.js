@@ -1,12 +1,17 @@
 import axios from "axios";
+import {bearer_token} from "./bearer_token";
 
 const instance = axios.create({
     baseURL: 'https://api.themoviedb.org/3/',
     headers: {
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhOGI3NWU1MzQwZjhiN2UwMGNhNjk0YzlhZDgxMWJhNSIsInN1YiI6IjYxMmY1M2YwNmEzNDQ4MDA2MjEzMmVhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lSpWwSix_cMaGeBglqUoOV_MXjwqzowkIUd9s0jzezg'
+        Authorization: 'Bearer ' + bearer_token
     }
 });
 
-const getMovies = async () => await instance('/discover/movie');
+const loadMovies = async () => await instance('/discover/movie');
 
-export {getMovies};
+const loadGenres = async () => await instance('/genre/movie/list');
+
+const loadFilmImages = async (id) => await instance(`/movie/${id}/images`);
+
+export {loadMovies, loadGenres, loadFilmImages};
