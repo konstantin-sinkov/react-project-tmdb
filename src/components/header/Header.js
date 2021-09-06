@@ -1,14 +1,30 @@
 import UserInfo from "../user_info/UserInfo";
 import GenresList from "../genres_list/GenresList";
-import {Navbar} from "react-bootstrap";
+import {Col, Container, Navbar} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import './Header.css';
 
 export default function Header() {
   return (
     <div>
-        <Navbar bg="dark" variant="dark">
-            <Navbar.Brand>MovieBase</Navbar.Brand>
-            <UserInfo/>
-            <GenresList/>
+        <Navbar bg="light" variant="light">
+            <Container>
+                <Col sm={2}>
+                    <Navbar.Brand>MovieBase</Navbar.Brand>
+                </Col>
+                <Col sm={8} className={"navbar_menu"}>
+                    <Link className="navbar-brand text-black text-lg brand-text" to="/">
+                        Home
+                    </Link>
+                    <Link className="navbar-brand text-black text-lg brand-text" to="/movies_page">
+                        Movies Page
+                    </Link>
+                    <GenresList/>
+                </Col>
+                <Col sm={2}>
+                    <UserInfo/>
+                </Col>
+            </Container>
         </Navbar>
     </div>
   );

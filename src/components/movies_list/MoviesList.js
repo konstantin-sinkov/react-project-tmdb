@@ -1,12 +1,14 @@
 import MovieListCard from "../movie_list_card/MovieListCard";
 import {useSelector} from "react-redux";
+import {Container} from "react-bootstrap";
 
-export default function MoviesList({films}) {
-  // const movies = useSelector((state) => console.log(state));
-  console.log(typeof(films));
+export default function MoviesList() {
+  let films = useSelector((state) => state.films);
+
   // debugger;
     return (
-    <div className="row">
+    <Container>
+      <div className={'row'}>
       {
         films.map(el =>
             <MovieListCard
@@ -14,6 +16,7 @@ export default function MoviesList({films}) {
                 key={el.id}
             />)
       }
-    </div>
+      </div>
+    </Container>
   );
 }

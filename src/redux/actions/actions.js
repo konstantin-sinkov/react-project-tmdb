@@ -1,4 +1,4 @@
-import {GET_FILMS, GET_GENRES} from "./action.types";
+import {GET_FILMS, GET_GENRES, GET_FILM_DETAILS} from "./action.types";
 
 const getFilms = (payload) => {
     return {type: GET_FILMS, payload}
@@ -8,4 +8,8 @@ const getGenres = (payload) => {
     return {type: GET_GENRES, payload}
 }
 
-export {getFilms, getGenres}
+const getFilmDetails = (payload) => {
+    return {type: GET_FILM_DETAILS, payload}
+}
+
+export {getFilms, getGenres, getFilmDetails}

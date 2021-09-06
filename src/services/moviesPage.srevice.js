@@ -12,6 +12,8 @@ const loadMovies = async () => await instance('/discover/movie');
 
 const loadGenres = async () => await instance('/genre/movie/list');
 
-const loadFilmImages = async (id) => await instance(`/movie/${id}/images`);
+const loadMovie = async (movieId) => await instance(`/movie/${movieId}`);
 
-export {loadMovies, loadGenres, loadFilmImages};
+// const loadFilmImages = async (id) => await instance(`/movie/${id}/images`);
+
+export {loadMovies, loadGenres, loadMovie};
