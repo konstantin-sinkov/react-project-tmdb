@@ -1,11 +1,28 @@
+:root {
+  --bg-color: beige;
+  --text-color: #0d0d0d;
+}
+
+[data-theme="darkMode"] {
+  --bg-color: #3F3F3F;
+  --text-color: #fff;
+}
+
+.App {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
 body {
-  background: repeat-y url("https://wallpapercave.com/wp/wp4284471.jpg");
+  background: repeat-y url('https://cdnb.artstation.com/p/assets/images/images/024/303/529/4k/ben-mauro-benmauro-kb3d-cover-10v6small-final.jpg?1581979948');
 }
 
 .wrapper {
-  background-color: honeydew;
+  padding-top: 50px;
   width: 1160px;
   margin: 0 auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 

@@ -1,9 +1,8 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {useLocation, useParams} from "react-router";
+import {useParams} from "react-router";
 import {loadMovie} from "../../services/moviesPage.srevice";
 import {getFilmDetails} from "../../redux/actions/actions";
-import {Link} from "react-router-dom";
 
 export default function MovieDetailsPage() {
   const {id} = useParams(); //get id from url
@@ -30,7 +29,7 @@ export default function MovieDetailsPage() {
               <li className="list-group-item">
                 <strong>Genre:</strong>
                 {
-                  loadedFilm.genres.map(el => `${el.name}, `)
+                  loadedFilm.genres ? loadedFilm.genres.map(el => ` ${el.name}, `) : 'no info'
                 }
               </li>
               <li className="list-group-item">
@@ -45,17 +44,21 @@ export default function MovieDetailsPage() {
               <li className="list-group-item">
                 <strong>Production company:</strong>
                 {
-                  loadedFilm.production_companies.map(el => `${el.name} `)
+                  loadedFilm.production_companies ? loadedFilm.production_companies.map(el => ` ${el.name}, `) : 'no info'
+
                 }
               </li>
               <li className="list-group-item">
-                <strong>Movie budget:</strong> {loadedFilm.budget}
+                <strong>Movie budget:</strong>
+                {
+                  ` ${loadedFilm.budget / 1000000} mln USD`
+                }
               </li>
             </ul>
           </div>
         </div>
         <div className="row">
-          <div className="card card-body bg-dark my-5 text-light">
+          <div className="card card-body bg-light my-5 text-black">
             <div className="col-md-12">
               <h3>About </h3>
               {loadedFilm.overview}

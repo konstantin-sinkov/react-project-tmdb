@@ -1,5 +1,5 @@
 import './App.css';
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {BrowserRouter as Router, Link} from "react-router-dom"
 import {loadGenres, loadMovies} from "./services/moviesPage.srevice";
 import {useDispatch, useSelector} from "react-redux";
@@ -24,11 +24,17 @@ function App() {
   }, []);
   // console.log(state);
 
+    //DarkMode
+    const [darkMode, setDarkMode] = useState(false);
+    const toggleDarkMode = () => setDarkMode(darkMode ? false: true)
 
 
   return (
       <Router>
-          <div>
+          <div
+              className={"App"}
+              data-theme={darkMode? "dark" : "light"}
+          >
               <Header/>
               {/*<MoviesPage props={state.films}/>*/}
               <div className="wrapper">

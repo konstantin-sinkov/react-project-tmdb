@@ -12,7 +12,7 @@ export default function Header() {
                 <Col sm={2}>
                     <Navbar.Brand>MovieBase</Navbar.Brand>
                 </Col>
-                <Col sm={8} className={"navbar_menu"}>
+                <Col sm={7} className={"navbar_menu"}>
                     <Link className="navbar-brand text-black text-lg brand-text" to="/">
                         Home
                     </Link>
@@ -21,7 +21,7 @@ export default function Header() {
                     </Link>
                     <GenresList/>
                 </Col>
-                <Col sm={2}>
+                <Col sm={3}>
                     <UserInfo/>
                 </Col>
             </Container>
