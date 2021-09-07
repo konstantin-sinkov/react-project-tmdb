@@ -18,9 +18,7 @@ export default function MovieListCard({film}) {
             {film.overview}
           </Card.Text>
           <GenreBadge filmGenreIds={film.genre_ids}/>
-          <StarRating
-              value={film.vote_average}
-              editing={false}/>
+          <StarRating rating={film.vote_average} />
           <br/>
           <Link className={"btn btn-primary"} to={'/movies_page/' + film.id}>
             DETAILS>>>
