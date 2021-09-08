@@ -13,9 +13,9 @@
   color: var(--text-color);
 }
 
-body {
-  background: repeat-y url('https://cdnb.artstation.com/p/assets/images/images/024/303/529/4k/ben-mauro-benmauro-kb3d-cover-10v6small-final.jpg?1581979948');
-}
+/*body {*/
+/*  background: repeat-y url('https://cdnb.artstation.com/p/assets/images/images/024/303/529/4k/ben-mauro-benmauro-kb3d-cover-10v6small-final.jpg?1581979948');*/
+/*}*/
 
 .wrapper {
   padding-top: 50px;

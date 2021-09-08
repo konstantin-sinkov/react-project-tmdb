@@ -10,6 +10,7 @@ import Header from "./components/header/Header";
 import MoviesPage from "./components/movies_page/MoviesPage";
 import {Route} from "react-router";
 import MovieDetailsPage from "./components/movie_details_page/MovieDetailsPage";
+import {Button} from "react-bootstrap";
 
 
 function App() {
@@ -26,7 +27,18 @@ function App() {
 
     //DarkMode
     const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => setDarkMode(darkMode ? false: true)
+    const toggleDarkMode = () => setDarkMode(!darkMode);
+
+    // const darkMode = false;
+    useEffect(() => {
+        console.log(`Is in dark mode? ${darkMode}`)
+    },[darkMode]);
+
+    localStorage.setItem("DARK_MODE", darkMode);
+    const storeDarkMode = localStorage.getItem("DARK_MODE");
+    // const [darkMode, setDarkMode] = useState(storeDarkMode);
+
+
 
 
   return (
@@ -35,7 +47,10 @@ function App() {
               className={"App"}
               data-theme={darkMode? "dark" : "light"}
           >
-              <Header/>
+              {/*<Button onClick={toggleDarkMode}>*/}
+              {/*    {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}*/}
+              {/*</Button>*/}
+              <Header />
               {/*<MoviesPage props={state.films}/>*/}
               <div className="wrapper">
                 <Route exact path="/movies_page"  component={MoviesPage} />
