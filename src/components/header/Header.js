@@ -1,8 +1,10 @@
 import UserInfo from "../user_info/UserInfo";
 import GenresList from "../genres_list/GenresList";
-import {Col, Container, Navbar} from "react-bootstrap";
+import {Button, Col, Container, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {ToggleButton} from "react-bootstrap";
 import './Header.css';
+import {useEffect, useState} from "react";
 
 export default function Header() {
   return (
@@ -20,6 +22,7 @@ export default function Header() {
                         Movies Page
                     </Link>
                     <GenresList/>
+
                 </Col>
                 <Col sm={3}>
                     <UserInfo/>

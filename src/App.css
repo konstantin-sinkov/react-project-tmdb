@@ -4,13 +4,21 @@
 }
 
 [data-theme="darkMode"] {
-  --bg-color: #3F3F3F;
-  --text-color: #fff;
+  --bg-color: #3F3F3F !important;
+  --text-color: #fff !important;
 }
 
 .App {
   background-color: var(--bg-color);
   color: var(--text-color);
+  /*position: absolute;*/
+}
+
+.darkmode_button {
+  position: fixed;
+  top: 85px;
+  right: 20px;
+  width: 80px;
 }
 
 /*body {*/

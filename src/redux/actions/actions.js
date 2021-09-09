@@ -1,4 +1,4 @@
-import {GET_FILMS, GET_GENRES, GET_FILM_DETAILS, TURN_TO_DARK_MODE} from "./action.types";
+import {GET_FILMS, GET_GENRES, GET_FILM_DETAILS, DARK_MODE_TOGGLE} from "./action.types";
 
 const getFilms = (payload) => {
     return {type: GET_FILMS, payload}
@@ -12,4 +12,8 @@ const getFilmDetails = (payload) => {
     return {type: GET_FILM_DETAILS, payload}
 }
 
-export {getFilms, getGenres, getFilmDetails}
+const toggleDarkMode = (payload) => {
+    return {type: DARK_MODE_TOGGLE, payload}
+}
+
+export {getFilms, getGenres, getFilmDetails, toggleDarkMode}

@@ -25,18 +25,34 @@ function App() {
   }, []);
   // console.log(state);
 
-    //DarkMode
+
+    // DarkMode
     const [darkMode, setDarkMode] = useState(false);
-    const toggleDarkMode = () => setDarkMode(!darkMode);
-
-    // const darkMode = false;
-    useEffect(() => {
-        console.log(`Is in dark mode? ${darkMode}`)
-    },[darkMode]);
-
     localStorage.setItem("DARK_MODE", darkMode);
     const storeDarkMode = localStorage.getItem("DARK_MODE");
+    const toggleDarkMode = () => setDarkMode(!darkMode);
+
+    useEffect(() => {
+        console.log(`Is in dark mode? ${darkMode}`)
+    }, [darkMode]);
+
+
+    // const [darkMode, setDarkMode] = useState(storeDarkMode)
+
+
+    // const storeDarkMode = localStorage.getItem("DARK_MODE");
     // const [darkMode, setDarkMode] = useState(storeDarkMode);
+    // const toggleDarkMode = () => setDarkMode(!darkMode);
+    //
+    // // const darkMode = false;
+    // useEffect(() => {
+    //     console.log(`Is in dark mode? ${darkMode}`)
+    // },[darkMode]);
+    //
+    // localStorage.setItem("DARK_MODE", darkMode);
+
+
+
 
 
 
@@ -45,11 +61,11 @@ function App() {
       <Router>
           <div
               className={"App"}
-              data-theme={darkMode? "dark" : "light"}
+              data-theme={darkMode ? "dark" : "light"}
           >
-              {/*<Button onClick={toggleDarkMode}>*/}
-              {/*    {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}*/}
-              {/*</Button>*/}
+              <Button variant="dark" onClick={toggleDarkMode} data-theme={darkMode? "dark" : "light"} className={"darkmode_button"}>
+                   {darkMode ? "dark theme" : "light theme"}
+              </Button>
               <Header />
               {/*<MoviesPage props={state.films}/>*/}
               <div className="wrapper">
