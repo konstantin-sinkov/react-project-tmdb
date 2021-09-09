@@ -3,10 +3,12 @@
   --text-color: #0d0d0d;
 }
 
-[data-theme="darkMode"] {
+[data-theme="dark"] {
   --bg-color: #3F3F3F !important;
   --text-color: #fff !important;
 }
+
+/*.movie_list_card*/
 
 .App {
   background-color: var(--bg-color);
@@ -14,11 +16,17 @@
   /*position: absolute;*/
 }
 
+
 .darkmode_button {
   position: fixed;
   top: 85px;
   right: 20px;
   width: 80px;
+}
+
+[data-theme="dark"] .darkmode_button {
+  background-color: beige;
+  color: #0d0d0d;
 }
 
 /*body {*/

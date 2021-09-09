@@ -36,27 +36,6 @@ function App() {
         console.log(`Is in dark mode? ${darkMode}`)
     }, [darkMode]);
 
-
-    // const [darkMode, setDarkMode] = useState(storeDarkMode)
-
-
-    // const storeDarkMode = localStorage.getItem("DARK_MODE");
-    // const [darkMode, setDarkMode] = useState(storeDarkMode);
-    // const toggleDarkMode = () => setDarkMode(!darkMode);
-    //
-    // // const darkMode = false;
-    // useEffect(() => {
-    //     console.log(`Is in dark mode? ${darkMode}`)
-    // },[darkMode]);
-    //
-    // localStorage.setItem("DARK_MODE", darkMode);
-
-
-
-
-
-
-
   return (
       <Router>
           <div
@@ -64,7 +43,7 @@ function App() {
               data-theme={darkMode ? "dark" : "light"}
           >
               <Button variant="dark" onClick={toggleDarkMode} data-theme={darkMode? "dark" : "light"} className={"darkmode_button"}>
-                   {darkMode ? "dark theme" : "light theme"}
+                   {darkMode ? "light theme" : "dark theme"}
               </Button>
               <Header />
               {/*<MoviesPage props={state.films}/>*/}

@@ -1,3 +1,23 @@
 .navbar_menu > * {
     display: inline-block;
 }
+
+.navbar_dropdown a{
+    color: #0d0d0d;
+    font-size: 1.2rem;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: #3F3F3F !important;
+    /*--bg-color: #3F3F3F !important;*/
+    border-bottom: 1px solid gainsboro;
+}
+
+[data-theme="dark"] .navbar-brand,
+[data-theme="dark"] .navbar_menu a,
+[data-theme="dark"] .navbar_dropdown,
+[data-theme="dark"] .navbar_dropdown a,
+[data-theme="dark"] .user_block,
+[data-theme="dark"] .user_block a{
+    color: #f6f6f6 !important;
+}

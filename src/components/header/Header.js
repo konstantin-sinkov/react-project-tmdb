@@ -1,15 +1,13 @@
 import UserInfo from "../user_info/UserInfo";
 import GenresList from "../genres_list/GenresList";
-import {Button, Col, Container, Navbar} from "react-bootstrap";
+import {Col, Container, Navbar} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import {ToggleButton} from "react-bootstrap";
 import './Header.css';
-import {useEffect, useState} from "react";
 
 export default function Header() {
   return (
     <div>
-        <Navbar bg="light" variant="light">
+        <Navbar bg="light" variant="light" className={"navbar"}>
             <Container>
                 <Col sm={2}>
                     <Navbar.Brand>MovieBase</Navbar.Brand>

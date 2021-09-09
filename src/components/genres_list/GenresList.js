@@ -8,7 +8,7 @@ export default function GenresList() {
 
   return (
     <div>
-        <NavDropdown title="Film genres" id="basic-nav-dropdown">
+        <NavDropdown title="Film genres" id="navbarScrollingDropdown" className={"navbar_dropdown"}>
             {
                 genres.map(el =>
                     <NavDropdown.Item className={"text-black"} href="#" key={el.id}>

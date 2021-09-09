@@ -8,7 +8,7 @@ export default function GenreBadge({filmGenreIds}) {
   for (let i = 0; i < state.length; i++) {
     for (let j = 0; j < filmGenreIds.length; j++) {
       if (+state[i].id === filmGenreIds[j]) {
-        filmGenres += state[i].name + ' ';
+        filmGenres += state[i].name + ', ';
       }
     }
   }

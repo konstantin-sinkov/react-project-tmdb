@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.movie_list_card {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    position: relative;
+    width: 16rem;
+    /*height: 50rem;*/
+    overflow: hidden;
+    margin: 10px;
+}
+
+[data-theme="dark"] .movie_list_card {
+    background-color: #3F3F3F !important;
+    --text-color: #fff !important;
+    border: 1px solid gainsboro;
+}
+
+.film_overview {
+    font-size: 0.8em;
+    /*height: 10rem;*/
+    overflow: hidden;
+}
